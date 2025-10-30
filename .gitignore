@@ -1,0 +1,9 @@
+.gradle/
+build/
+target/
+gradle.properties
+local.properties
+*.iml
+*.log
+*.class
+.DS_Store

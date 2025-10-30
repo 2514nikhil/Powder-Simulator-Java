@@ -1,0 +1,47 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
+    id 'jpro-gradle-plugin' version '2024.1.0'
+}
+
+def jproUsername = project.findProperty('jpro.username') ?: System.getenv('JPRO_USERNAME')
+def jproPassword = project.findProperty('jpro.password') ?: System.getenv('JPRO_PASSWORD')
+
+repositories {
+    mavenCentral()
+    maven {
+        url = uri('https://sandec.jfrog.io/artifactory/repo')
+        if (jproUsername && jproPassword) {
+            credentials {
+                username = jproUsername
+                password = jproPassword
+            }
+        }
+    }
+}
+
+application {
+    mainClass = 'com.powdersimulator.PowderSimulator'
+    mainModule = 'powdersimulator'
+}
+
+javafx {
+    // Use LTS JavaFX 21 to run on JDK 21 without requiring JDK 23
+    version = '21.0.5'
+    modules = ['javafx.controls']
+}
+
+java {
+    toolchain {
+        // Align toolchain with JavaFX 21 (runs on JDK 21)
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+jpro {
+    jproVersion = '2024.1.0'
+    useModuleSystem = true
+    bootMain = 'powdersimulator/com.powdersimulator.PowderSimulator'
+    releaseName = 'PowderSimulator'
+    // releaseDir = file("build/jpro")
+}

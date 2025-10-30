@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "PowderSimulator",
+            "request": "launch",
+            "mainClass": "powdersimulator/com.powdersimulator.PowderSimulator",
+            "projectName": "powder-simulator"
+        },
+        {
+            "type": "java",
+            "name": "PowderSimulator JavaFX",
+            "request": "launch",
+            "mainClass": "PowderSimulator",
+            "projectName": "PowderSimulator_ebcb1a63",
+            "vmArgs": "--module-path C:/javafx-sdk-25/lib --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

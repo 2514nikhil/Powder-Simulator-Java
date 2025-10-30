@@ -1,0 +1,21 @@
+pluginManagement {
+  repositories {
+    gradlePluginPortal()
+    mavenCentral()
+    maven {
+      url = uri("https://sandec.jfrog.io/artifactory/repo")
+    }
+  }
+
+  resolutionStrategy {
+    eachPlugin {
+      if (requested.id.id == "com.sandec.jpro") {
+        useModule("one.jpro:jpro-gradle-plugin:${requested.version}")
+      }
+    }
+  }
+}
+
+plugins {
+  id("org.gradle.toolchains.foojay-resolver-convention") version "0.9.0"
+}

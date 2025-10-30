@@ -1,0 +1,19 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "${env:JAVA_FX_HOME}/lib/**/*.jar",
+        "C:/javafx-sdk-21/lib/**/*.jar",
+        "C:/javafx-sdk-25/lib/**/*.jar",
+    "${env:USERPROFILE}/javafx-sdk-21/lib/**/*.jar",
+    "${env:USERPROFILE}/javafx-sdk-25/lib/**/*.jar",
+        "C:/Users/${env:USERNAME}/.m2/repository/org/openjfx/**/*.jar"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
+}
