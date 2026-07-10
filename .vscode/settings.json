@@ -4,12 +4,26 @@
         "${env:JAVA_FX_HOME}/lib/**/*.jar",
         "C:/javafx-sdk-21/lib/**/*.jar",
         "C:/javafx-sdk-25/lib/**/*.jar",
-    "${env:USERPROFILE}/javafx-sdk-21/lib/**/*.jar",
-    "${env:USERPROFILE}/javafx-sdk-25/lib/**/*.jar",
+        "${env:USERPROFILE}/javafx-sdk-21/lib/**/*.jar",
+        "${env:USERPROFILE}/javafx-sdk-25/lib/**/*.jar",
         "C:/Users/${env:USERNAME}/.m2/repository/org/openjfx/**/*.jar"
     ],
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-21.0.10",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "C:\\Program Files\\Java\\jdk-21.0.10",
+            "default": true
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "C:\\Program Files\\Microsoft\\jdk-17.0.16.8-hotspot"
+        }
+    ],
+    "java.import.gradle.enabled": true,
+    "java.import.gradle.offline.enabled": false,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
